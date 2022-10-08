@@ -1,13 +1,3 @@
-// import {
-//   AppstoreOutlined,
-//   BarChartOutlined,
-//   CloudOutlined,
-//   ShopOutlined,
-//   TeamOutlined,
-//   UploadOutlined,
-//   UserOutlined,
-//   VideoCameraOutlined,
-// } from '@ant-design/icons';
 
 import { FaPlay ,FaRegHandPeace,FaInfinity, FaVolumeMute, FaVolumeUp,FaPause} from 'react-icons/fa';
 import { Layout, Menu } from 'antd';
@@ -16,19 +6,6 @@ import './App.css'
 
 
 const { Header, Content, Footer, Sider } = Layout;
-// const actions = ['play','pause']
-// const color = [ 'green','red']
-
-
-
-// const items = [
-//   FaPlay,FaPause,
- 
-// ].map((icon, index) => ({
-//   key: String(index + 1),
-//   icon: React.createElement(icon, {className: `button-${actions[index]}`, color: color[index]}),
-//   label: actions[index]
-// }));
 
 function App() {
   const videoRef = useRef(null)
@@ -57,9 +34,7 @@ function App() {
         
       }}
     >
-      {/* <div className="logo" > 
-      <FaRegHandPeace color='silver' /> 
-      </div> */}
+    
 
         <Menu   theme="dark">
             <Menu.Item><FaPlay onClick={playVideo} className='button-play'/></Menu.Item>
@@ -87,10 +62,7 @@ function App() {
       >
         <div
           className="site-layout-background"
-          style={{
-            // padding: 24,
-            // textAlign: 'center',
-          }}
+         
         >
            <video ref={videoRef} id="vidContent" width="100%" loop={loop} muted={sound} >
 
