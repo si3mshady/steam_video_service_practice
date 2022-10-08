@@ -16,6 +16,10 @@
 
 .ant-layout-sider {
     background-color: black !important;
+    /* background-image: url("https://media.giphy.com/media/XcRdkuE8jwHkccVibM/giphy.gif");
+    background-repeat: no-repeat;
+    object-fit: contain !important; */
+   
 }
 
 
@@ -27,12 +31,20 @@
 
 .ant-layout-sider-children:hover {
     border: 1px aqua solid;
+   
 }
 
 .ant-layout-sider-children > ul {
    margin-top: 50% !important;
    background-color: black !important;
+   opacity: .1 !important;
 }
+
+
+.ant-layout-sider-children:hover > ul {
+   
+    opacity: 1 !important;
+ }
 
   [data-theme="dark"] .site-layout .site-layout-background {
     background: #141414;

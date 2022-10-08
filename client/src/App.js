@@ -34,8 +34,7 @@ function App() {
         
       }}
     >
-    
-
+     
         <Menu   theme="dark">
             <Menu.Item><FaPlay onClick={playVideo} className='button-play'/></Menu.Item>
             <Menu.Item><FaPause onClick={pauseVideo} className='button-pause'/></Menu.Item>
