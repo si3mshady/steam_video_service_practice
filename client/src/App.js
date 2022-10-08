@@ -66,11 +66,9 @@ function App() {
             <Menu.Item><FaPause onClick={pauseVideo} className='button-pause'/></Menu.Item>
             <Menu.Item><FaVolumeUp onClick={() => setSound(false)} className='button-volup'/></Menu.Item>
             <Menu.Item><FaVolumeMute onClick={() => setSound(true)} className='button-voldown'/></Menu.Item>
-            <Menu.Item><FaInfinity onClick={() => setLoop(!loop)} className='button-voldown'/></Menu.Item>
+            <Menu.Item><FaInfinity onClick={() => setLoop(!loop)} className='button-loop'/></Menu.Item>
           
-      </Menu>;
-
-      {/* <Menu theme="dark"   items={[]} /> */}
+      </Menu>
 
 
     </Sider>
@@ -80,12 +78,7 @@ function App() {
         marginLeft: 200,
       }}
     >
-      <Header
-        className="site-layout-background"
-        style={{
-          padding: 0,
-        }}
-      />
+   
       <Content
         style={{
           margin: '0',
