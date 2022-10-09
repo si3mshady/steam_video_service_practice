@@ -1,0 +1,17 @@
+version: "3.7"  # optional since v1.27.0
+services:
+  #reactApp
+  videoplayer:
+    # image: si3mshady/slackclone-fe:1
+    build: client/
+    ports:
+      - "3000:3000"    #external:internal frontend 
+    depends_on:
+      - streamingservice
+  streamingservice:
+    # image: si3mshady/slackclone-be:1     
+    build: server/
+    ports: 
+      - "888:888"    #external:internal 
+    
+ 

@@ -1,15 +1,23 @@
 const xpress = require('express')
 const fs = require('fs')
 const app = xpress();
+const cors = require('cors')
 PORT = 888
 
+app.use(cors())
 
-app.get('/', (req,res) => {
+app.get('/health', (req,res) => {
 
-    res.sendFile(__dirname + "/index.html")
+    res.status(200).send('Healthy!')
     
 })
 
+// app.get('/', (req,res) => {
+
+//     res.sendFile(__dirname + "/index.html")
+    
+// })
+// 2
 app.get('/videos', (req,res) => {
 
   const range = req.headers.range;
@@ -39,7 +47,6 @@ app.get('/videos', (req,res) => {
     }
 
     res.writeHead(206,headers); //tells browswer that partial data is being sent
-
     const videoStream = fs.createReadStream(videoPath, {start,end})
     videoStream.pipe(res)
 
