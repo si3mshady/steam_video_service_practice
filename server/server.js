@@ -12,12 +12,7 @@ app.get('/health', (req,res) => {
     
 })
 
-// app.get('/', (req,res) => {
 
-//     res.sendFile(__dirname + "/index.html")
-    
-// })
-// 2
 app.get('/videos', (req,res) => {
 
   const range = req.headers.range;
@@ -25,8 +20,8 @@ app.get('/videos', (req,res) => {
   if (!range) {
     res.status(400).send("Request must include range header. Please try again.")
   }
-    // const videoPath = "ThirdChild.mp4"
-    const videoPath = "drone_footage.mp4"
+    // const videoPath = __dirname +  "/ThirdChild.mp4"
+    const videoPath = __dirname + "/drone_footage.mp4"
     // get size of video 
     const videoSize = fs.statSync(videoPath).size
     const CHUNK_SIZE = 10 ** 6; //1mb

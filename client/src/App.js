@@ -65,7 +65,7 @@ function App() {
         >
            <video ref={videoRef} id="vidContent" width="100%" loop={loop} muted={sound} >
 
-              <source src="http://localhost:888/videos" type="video/mp4"/>
+              <source src="http://54.197.66.42:8888/videos" type="video/mp4"/>
 
               </video>
          
